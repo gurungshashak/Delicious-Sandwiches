@@ -1,5 +1,7 @@
 package com.pluralsight.model;
 
+import com.pluralsight.typeandsize.SandwichSize;
+
 public abstract class Topping {
     protected String name;
     protected boolean extra;
@@ -17,9 +19,10 @@ public abstract class Topping {
         return extra;
     }
 
-    public abstract double getPrice();
+    public abstract double getPrice(SandwichSize sandwich);
 
     public String toString() {
         return name + "Is Extra " ;
     }
+
 }

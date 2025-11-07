@@ -1,5 +1,7 @@
 package com.pluralsight.model;
 
+import com.pluralsight.typeandsize.SandwichSize;
+
 public class Sauce extends Topping{
 
     public Sauce(String name, boolean extra) {
@@ -7,7 +9,7 @@ public class Sauce extends Topping{
     }
 
     @Override
-    public double getPrice() {
+    public double getPrice(SandwichSize sandwich) {
         return 0;
     }
 }
