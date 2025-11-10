@@ -1,6 +1,5 @@
 package com.pluralsight.model;
 
-import com.pluralsight.typeandsize.SandwichSize;
 
 public class RegularTopping extends Topping{
     public RegularTopping(String name, boolean extra) {
@@ -8,7 +7,7 @@ public class RegularTopping extends Topping{
     }
 
     @Override
-    public double getPrice(SandwichSize sandwich) {
+    public double getPrice(String Size) {
         return 0;
     }
 
