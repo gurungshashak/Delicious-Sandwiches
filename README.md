@@ -17,3 +17,7 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 - **Add Chips: here you choose type of chips you would like. Ex: Lay's, Doritos, ect...
 - **CheckOut: here you will get the full view of your order, total and will have the option to choose if it's your order or not.
 - **Cancel Order: this will return you to the homescreen without saving any of your orders.
+
+### Receipt Saving
+-Once you're done with your order and confirmed it is your order
+-It will save the receipt to a file with all the order detail 
