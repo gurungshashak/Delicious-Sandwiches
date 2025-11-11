@@ -2,7 +2,7 @@
 
    ## OverView ##
 ** This is a project I worked on for My CapStone 2.
-**The system will allow you to build sandwich of different sizes and toppings,
+- **The system will allow you to build sandwich of different sizes and toppings,
 you can add drinks, chips, and it will give you a receipt after you are done.
 
   ## Features
