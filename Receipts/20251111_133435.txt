@@ -1,0 +1,9 @@
+===Your Receipt===8/WhiteSandwich
+ Meat: [Ham, Chicken]
+ Cheeses: [American]
+ Toppings: [Lettuce, Oions, Pickles]
+ Sauses: [Maya]
+ Extra Meat: false
+ Extra Cheese: false
+ Price: $12.50
+small drink (coke)$: 1.25layes Chips: $1.50Total: $15.25
