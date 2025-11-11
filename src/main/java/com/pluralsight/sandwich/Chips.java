@@ -1,10 +1,16 @@
 package com.pluralsight.sandwich;
 
-public class Chips {
+import com.pluralsight.Product;
+
+public class Chips implements Product {
     private String chipType;
 
     public Chips(String chipType) {
         this.chipType = chipType;
+    }
+
+    public String getName(){
+        return "Chips (" + chipType + ")";
     }
 
     public double getPrice() {
