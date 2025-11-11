@@ -142,7 +142,7 @@ public class UserInterFace {
     }
 
     private static void addDrink(){
-        System.out.print("Size (small, medium, large): ");
+        System.out.print("\nSize (small, medium, large): ");
         String size = sc.next();
         System.out.print("Flavor: ");
         String flavor = sc.next();
@@ -152,7 +152,7 @@ public class UserInterFace {
     }
 
     private static void addChips(){
-        System.out.println("Type Of Chips: ");
+        System.out.print("\nType Of Chips: ");
         String type = sc.next();
 
         order.addItem(new Chips(type));
