@@ -18,6 +18,6 @@ public class Chips implements Product {
     }
 
     public String toString() {
-        return chipType + "Chips: $" + String.format("%.2f", getPrice());
+        return chipType + " Chips: $" + String.format("%.2f", getPrice());
     }
 }

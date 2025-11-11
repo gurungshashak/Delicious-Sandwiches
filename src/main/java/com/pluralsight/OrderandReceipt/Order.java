@@ -30,14 +30,14 @@ public class Order {
 
     public void saveReceipt(){
         try{
-            File folder = new File("Receipts");
+            File folder = new File("receipts");
             if(!folder.exists()) folder.mkdir();
 
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            File file = new File("Receipts/"+timeStamp+".txt");
+            File file = new File(folder+timeStamp+".txt");
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
 
-            bw.write(String.format("===Your Receipt==="));
+            bw.write(String.format("===Your Receipt===\n"));
             for(Product p : items){
                 bw.write(p.toString());
             }

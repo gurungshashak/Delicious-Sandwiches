@@ -28,7 +28,7 @@ public class Drink implements Product {
 
 
     public String toString() {
-        return getName() + "-$" + String.format("%.2f", getPrice());
+        return getName() + "$: " + String.format("%.2f", getPrice());
     }
 
 }

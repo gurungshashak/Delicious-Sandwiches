@@ -104,10 +104,10 @@ public class Sandwich implements Product {
     }
 
     public String toString(){
-        return getName() + (toasted ? " (Toasted)" : "") + "\n Meat: " + meats + "\n Cheeses: " + cheeses + "\n Toppings: " + toppings
-        + "\n Toppings: " + toppings + "\n Sauses: " + sauces + "\n Extra Meat: " + extraMeat
-                + "\n Extra Cheese: " + extraCheese +
-                "\n Price: $" + String.format("%.2f", getPrice()) + "\n";
+        return getName() + "\n Meat: " + meats + "\n Cheeses: " + cheeses +
+                "\n Toppings: " + toppings + "\n Sauses: " + sauces + "\n Extra Meat: " + extraMeat
+                + "\n Extra Cheese: " + extraCheese + (toasted ? " (Toasted)" : "") +
+        "\n Price: $" + String.format("%.2f", getPrice()) + "\n";
     }
 
 
