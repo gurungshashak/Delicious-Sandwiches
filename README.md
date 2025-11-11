@@ -19,5 +19,5 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 - **Cancel Order: this will return you to the homescreen without saving any of your orders.
 
 ### Receipt Saving
--Once you're done with your order and confirmed it is your order
--It will save the receipt to a file with all the order detail 
+- **Once you're done with your order and confirmed it is your order
+- **It will save the receipt to a file with all the order detail 
