@@ -10,9 +10,13 @@ import java.util.Scanner;
 
 public class UserInterFace {
     static Scanner sc = new Scanner(System.in);
-    private static Order order = new Order();
+    static Order order = new Order();
+
 
     public void userOrder(){
+        System.out.println("Enter Your Name: ");
+        String name = sc.nextLine();
+
         boolean run = true;
         while(run){
             System.out.println("====Welcome To Deli's Sand===");

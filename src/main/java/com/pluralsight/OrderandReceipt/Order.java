@@ -1,6 +1,7 @@
 package com.pluralsight.OrderandReceipt;
 
 import com.pluralsight.Product;
+import com.pluralsight.sandwich.Sandwich;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -12,6 +13,7 @@ import java.util.List;
 
 public class Order {
     private List<Product> items = new ArrayList<>();
+
 
     public void addItem(Product p) {
         items.add(p);
@@ -38,6 +40,7 @@ public class Order {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
 
             bw.write(String.format("===Your Receipt===\n"));
+            bw.write(String.format("\nDate" + new Date()));
             for(Product p : items){
                 bw.write(p.toString());
             }
