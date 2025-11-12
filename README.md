@@ -9,10 +9,12 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 
 ### HomeScreen
 - You start with a New order or to exit the app
- ** <img width="362" height="193" alt="homeScreen" src="https://github.com/user-attachments/assets/e4beec38-c08b-4adf-b600-51565563adbc" />
+  <img width="362" height="193" alt="homeScreen" src="https://github.com/user-attachments/assets/e4beec38-c08b-4adf-b600-51565563adbc" />
 
   
 ### Order Menu
+<img width="369" height="277" alt="orderMenu" src="https://github.com/user-attachments/assets/cc0970ba-3063-400f-910e-8f354f735208" />
+
 - In order menu you will see 4 Options
 - **Add Sandwich: in here you will have the options to choose bread,size,toppings,sauces.
 - **Add Drink: in here you can choose drink size and its flavor. EX: Water,Coke,Sprite,Fanta,ect....
