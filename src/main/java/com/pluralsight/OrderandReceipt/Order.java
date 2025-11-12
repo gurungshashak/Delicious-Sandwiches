@@ -39,7 +39,6 @@ public class Order {
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
             bw.write(String.format("===Your Receipt===\n"));
             bw.write(String.format("\nDate" + new Date()));
-            bw.write(String.format("=============================="));
             for(Product p : items){
                 bw.write(p.toString());
             }

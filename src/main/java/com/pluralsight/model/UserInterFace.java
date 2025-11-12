@@ -25,13 +25,13 @@ public class UserInterFace {
             System.out.println("\t1)  New Order");
             System.out.println("\t0)  Exit");
             System.out.print("Please enter (1 or 0): ");
-            int choice = sc.nextInt();
+            String choice = sc.nextLine();
 
            switch(choice){
-               case 1:
+               case "1":
                    orderSandwiche();
                    break;
-               case 0:
+               case "0":
                    System.out.println("\n\t\t\tBye Bye");
                    System.out.println("\t=====================");
                    run = false;
@@ -53,17 +53,18 @@ public class UserInterFace {
             System.out.println("4) \t CheckOut");
             System.out.println(("5) \t Signature Sandwiches"));
             System.out.println("0) \t Cancel Order");
-            System.out.print("What Would You Like(0-4): ");
-            int choice = sc.nextInt();
+            System.out.print("What Would You Like(0-5): ");
+            String choice = sc.nextLine();
 
             switch (choice){
-                case 1 -> addSandwich();
-                case 2 -> addDrink();
-                case 3 -> addChips();
-                case 4 -> checkOut();
-                case 5 -> signatureSandwiches();
-                case 0 ->{
+                case "1" -> addSandwich();
+                case "2" -> addDrink();
+                case "3" -> addChips();
+                case "4" -> checkOut();
+                case "5" -> signatureSandwiches();
+                case "0" ->{
                     System.out.println("Order Cancelled");
+                    order.getItems().clear();
                     run = false;
                 }
                 default -> System.out.println("Invalid choice");
@@ -225,22 +226,34 @@ public class UserInterFace {
             sandwich.setExtraCheese(cheese2.equalsIgnoreCase("y"));
 
             System.out.print("Would You Like Extra Toppings? (y/n): ");
-            String [] extraTopping = sc.nextLine().split(",");
-            for(String t : extraTopping){
-                if(!t.isBlank()){
-                    sandwich.addTopping(t.trim());
+            String toppings = sc.next();
+            if(toppings.equalsIgnoreCase("y")){
+                System.out.println("\n\t\tAdd Toppings");
+                System.out.println("\t==================");
+                System.out.println("\tLettuce \n\tPeppers \n\tOnions \n\tTomatoes \n\tJalapenos \n\tCucumbers \n\tPickles \n\tGuacamole \n\tMushrooms");
+                System.out.print("Pick: ");
+                String topping = sc.next();
+                if(!topping.isBlank()){
+                    for (String p : topping.split(",")){
+                        sandwich.addTopping(p.trim());
+                    }
                 }
             }
 
             System.out.println("Would You Like Extra Sauce? (y/n): ");
-            String [] sauce = sc.nextLine().split(",");
-            for(String s : sauce){
-                if(!s.isBlank()){
-                    sandwich.addSauce(s);
+            String sauce = sc.next();
+            if(sauce.equalsIgnoreCase("y")){
+                System.out.println("\n\t\tAdd Sauces");
+                System.out.println("\t==================");
+                System.out.println("\tMayo \n\tMustard \n\tKetchup \n\tRanch \n\tThousand islands \n\tVinaigrette");
+                System.out.print("Pick: ");
+                String pick = sc.next();
+                if(!pick.isBlank()){
+                    for (String s : pick.split(",")){
+                        sandwich.addSauce(s.trim());
+                    }
                 }
             }
-
-
 
         }
         System.out.println("Order Saved!!");
