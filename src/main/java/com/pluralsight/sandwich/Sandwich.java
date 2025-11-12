@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich implements Product {
+    private String name;
     private String bread;
     private int size;
     private boolean toasted;
@@ -16,7 +17,8 @@ public class Sandwich implements Product {
     private boolean extraMeat = false;
     private boolean extraCheese = false;
 
-    public Sandwich(String bread, int size){
+    public Sandwich(String name, String bread, int size){
+        this.name = name;
         this.bread = bread;
         this.size = size;
     }
@@ -44,7 +46,7 @@ public class Sandwich implements Product {
     }
 
     public String getName(){
-        return size + "/" + bread + "Sandwich";
+        return "Customer: "+ name + "\n" + size + "/" + bread + "Sandwich";
     }
 
     public double getPrice(){

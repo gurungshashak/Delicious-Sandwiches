@@ -5,6 +5,8 @@ import com.pluralsight.Product;
 import com.pluralsight.sandwich.Chips;
 import com.pluralsight.sandwich.Drink;
 import com.pluralsight.sandwich.Sandwich;
+import com.pluralsight.signature.BLT;
+import com.pluralsight.signature.PhillyCheeseSteak;
 
 import java.util.Scanner;
 
@@ -49,6 +51,7 @@ public class UserInterFace {
             System.out.println("2) \t Add Drink");
             System.out.println("3) \t Add Chips");
             System.out.println("4) \t CheckOut");
+            System.out.println(("5) \t Signature Sandwiches"));
             System.out.println("0) \t Cancel Order");
             System.out.print("What Would You Like(0-4): ");
             int choice = sc.nextInt();
@@ -58,6 +61,7 @@ public class UserInterFace {
                 case 2 -> addDrink();
                 case 3 -> addChips();
                 case 4 -> checkOut();
+                case 5 -> signatureSandwiches();
                 case 0 ->{
                     System.out.println("Order Cancelled");
                     run = false;
@@ -70,13 +74,16 @@ public class UserInterFace {
     }
 
     private static void addSandwich(){
+        System.out.print("Enter Your Name: ");
+        String name = sc.next();
+
         System.out.print("Pick A Bread (White, Wheat, Rye, Wrap): ");
         String bread = sc.next();
 
         System.out.print("What Size Would You Like(4, 8, 12): ");
         int size = sc.nextInt();
 
-        Sandwich sandwich = new Sandwich(bread, size);
+        Sandwich sandwich = new Sandwich(name,bread, size);
 
         // Meat and if extra
         System.out.println("\n\t\tAdd Meats");
@@ -182,6 +189,62 @@ public class UserInterFace {
             System.out.println("We are Sorry");
             return;
         }
+    }
+
+    private static void signatureSandwiches(){
+        System.out.println("\t1) BLt");
+        System.out.println("\t2) Philly Cheese Steak");
+        System.out.println("\t0) Return To The Order Menu");
+        System.out.print("Choose The Signature Your Want(0-2): ");
+        String choose = sc.next();
+
+        Sandwich sandwich = null;
+        switch (choose){
+            case "1":
+                sandwich = new BLT();
+                break;
+            case "2":
+                sandwich = new PhillyCheeseSteak();
+                break;
+            case "0":
+                orderSandwiche();
+                break;
+            default:
+                System.out.println("Invalid Choice!");
+        }
+
+        System.out.print("Would You Like Like To customize It More? (y/n): ");
+        String like = sc.next();
+        if(like.equalsIgnoreCase("y")){
+            System.out.print("Would You Like Extra Meat? (y/n): ");
+            String extraMeat = sc.next();
+            sandwich.setExtraMeat(extraMeat.equalsIgnoreCase("y"));
+
+            System.out.print("Would You Like Extra Cheese? (y/n): ");
+            String cheese2 = sc.next();
+            sandwich.setExtraCheese(cheese2.equalsIgnoreCase("y"));
+
+            System.out.print("Would You Like Extra Toppings? (y/n): ");
+            String [] extraTopping = sc.nextLine().split(",");
+            for(String t : extraTopping){
+                if(!t.isBlank()){
+                    sandwich.addTopping(t.trim());
+                }
+            }
+
+            System.out.println("Would You Like Extra Sauce? (y/n): ");
+            String [] sauce = sc.nextLine().split(",");
+            for(String s : sauce){
+                if(!s.isBlank()){
+                    sandwich.addSauce(s);
+                }
+            }
+
+
+
+        }
+        System.out.println("Order Saved!!");
+        order.addItem(sandwich);
     }
 
 }
