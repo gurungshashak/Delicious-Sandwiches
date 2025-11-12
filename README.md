@@ -24,7 +24,7 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 
    ## Pricing
  |Type of Bread| size "4 | 8 | 12"
- =================================
+ 
  |**Bread**| $5.50 | $7.00 | $8.50 |
  |**Meat**| $1.00 | $2.00 | $3.00 |
  |**Extra Meat**| $.50 | $1.00 | $1.50 |
