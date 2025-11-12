@@ -20,8 +20,15 @@ you can add drinks, chips, and it will give you a receipt after you are done.
   <img width="383" height="664" alt="Sandwich" src="https://github.com/user-attachments/assets/0c0f322e-55d1-4936-9196-835188f4ba10" />
 
 - **Add Drink: in here you can choose drink size and its flavor. EX: Water,Coke,Sprite,Fanta,ect....
+- <img width="557" height="149" alt="Drink" src="https://github.com/user-attachments/assets/b220ae79-b326-4ee4-8711-a771d16c197e" />
+
+  
 - **Add Chips: here you choose type of chips you would like. Ex: Lay's, Doritos, ect...
+  <img width="221" height="124" alt="Chips" src="https://github.com/user-attachments/assets/3d87a0f5-869c-4958-8606-0ad3b403d51b" />
+  
 - **CheckOut: here you will get the full view of your order, total and will have the option to choose if it's your order or not.
+  <img width="490" height="551" alt="CheckOut" src="https://github.com/user-attachments/assets/f3b019fb-40e5-4f31-974e-c42fcebd9190" />
+
 - **Cancel Order: this will return you to the homescreen without saving any of your orders.
 
 ### Receipt Saving
