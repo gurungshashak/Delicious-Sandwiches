@@ -1,9 +1,0 @@
-===Your Receipt===4/WhiteSandwich
- Meat: [Ham]
- Cheeses: [American]
- Toppings: [Lettuce]
- Sauses: [oniond, Pickles]
- Extra Meat: false
- Extra Cheese: false
- Price: $7.25
-small drink (coe)$: 1.25layes Chips: $1.50Total: $10.00
