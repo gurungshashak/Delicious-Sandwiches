@@ -9,7 +9,7 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 
 ### HomeScreen
 - You start with a New order or to exit the app
-  <img width="362" height="193" alt="homeScreen" src="https://github.com/user-attachments/assets/e4beec38-c08b-4adf-b600-51565563adbc" />
+ ** <img width="362" height="193" alt="homeScreen" src="https://github.com/user-attachments/assets/e4beec38-c08b-4adf-b600-51565563adbc" />
 
   
 ### Order Menu
