@@ -33,7 +33,7 @@ public class Order {
             File folder = new File("receipts");
             if(!folder.exists()) folder.mkdir();
 
-            String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String timeStamp = new SimpleDateFormat(" " + "yyyyMMdd_HHmmss").format(new Date());
             File file = new File(folder,timeStamp + ".txt");
 
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
@@ -42,8 +42,7 @@ public class Order {
             for(Product p : items){
                 bw.write(p.toString());
             }
-            bw.write(String.format("=============================="));
-            bw.write(String.format("Total: $" + String.format("%.2f",getTotal())));
+            bw.write(String.format("\nTotal: $" + String.format("%.2f",getTotal())));
             bw.close();
 
             System.out.println("Receipt has been saved!" + file.getAbsolutePath());

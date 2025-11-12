@@ -46,7 +46,7 @@ public class Sandwich implements Product {
     }
 
     public String getName(){
-        return "Customer: "+ name + "\n" + size + "/" + bread + "Sandwich";
+        return "\nCustomer: "+ name + "\n" + size + "/" + bread + "Sandwich";
     }
 
     public double getPrice(){
@@ -107,8 +107,8 @@ public class Sandwich implements Product {
 
     public String toString(){
         return getName() + "\n Meat: " + meats + "\n Cheeses: " + cheeses +
-                "\n Toppings: " + toppings + "\n Sauses: " + sauces + "\n Extra Meat: " + extraMeat
-                + "\n Extra Cheese: " + extraCheese + (toasted ? " (Toasted)" : "") +
+                "\n Toppings: " + toppings + "\n Sauces: " + sauces + "\n Extra Meat: " + extraMeat
+                + "\n Extra Cheese: " + extraCheese + (toasted ? "\n (Toasted)" : "") +
         "\n Price: $" + String.format("%.2f", getPrice()) + "\n";
     }
 
