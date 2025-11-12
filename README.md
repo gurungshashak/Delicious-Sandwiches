@@ -21,3 +21,16 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 ### Receipt Saving
 - **Once you're done with your order and confirmed it is your order
 - **It will save the receipt to a file with all the order detail 
+
+   ## Pricing
+ |Type of Bread| size "4 | 8 | 12"
+ =================================
+ |**Bread**| $5.50 | $7.00 | $8.50 |
+ |**Meat**| $1.00 | $2.00 | $3.00 |
+ |**Extra Meat**| $.50 | $1.00 | $1.50 |
+ |**Cheese**| $.70 | $1.50 | $2.25 |
+ |**Extra Cheese**| $.30 | $.60 | $.90 |
+ |**Toppings & Sauces**| Included |
+ 
+ **Drinks:** Small $2.00 | Medium $2.50 | Large $3.00
+ **Chips:** $1.50 each
