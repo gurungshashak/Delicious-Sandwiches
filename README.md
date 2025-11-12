@@ -9,6 +9,7 @@ you can add drinks, chips, and it will give you a receipt after you are done.
 
 ### HomeScreen
 - You start with a New order or to exit the app
+
   
 ### Order Menu
 - In order menu you will see 4 Options
@@ -34,3 +35,12 @@ you can add drinks, chips, and it will give you a receipt after you are done.
  
  **Drinks:** Small $2.00 | Medium $2.50 | Large $3.00
  **Chips:** $1.50 each
+
+  ## UpDated Order Screen
+- **As you can see that there is a new option on the screen
+
+
+  ### Signature Sandwiches
+-Theses are two preMade sandwiches which users can just select 
+
+ 
