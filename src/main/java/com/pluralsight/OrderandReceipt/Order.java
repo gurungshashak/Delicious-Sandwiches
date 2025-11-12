@@ -1,8 +1,6 @@
 package com.pluralsight.OrderandReceipt;
 
 import com.pluralsight.Product;
-import com.pluralsight.sandwich.Sandwich;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -36,18 +34,20 @@ public class Order {
             if(!folder.exists()) folder.mkdir();
 
             String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            File file = new File(folder+timeStamp+".txt");
-            BufferedWriter bw = new BufferedWriter(new FileWriter(file));
+            File file = new File(folder,timeStamp + ".txt");
 
+            BufferedWriter bw = new BufferedWriter(new FileWriter(file));
             bw.write(String.format("===Your Receipt===\n"));
             bw.write(String.format("\nDate" + new Date()));
+            bw.write(String.format("=============================="));
             for(Product p : items){
                 bw.write(p.toString());
             }
+            bw.write(String.format("=============================="));
             bw.write(String.format("Total: $" + String.format("%.2f",getTotal())));
             bw.close();
 
-            System.out.println("Receipt has been saved!");
+            System.out.println("Receipt has been saved!" + file.getAbsolutePath());
         }catch(Exception e){
             e.printStackTrace();
         }

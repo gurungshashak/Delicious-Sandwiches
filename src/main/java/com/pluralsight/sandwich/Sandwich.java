@@ -111,6 +111,10 @@ public class Sandwich implements Product {
     }
 
 
-
-
+//public String toString(){
+//        return size + "/" + bread + (toasted ? " toasted" : "") +
+//                "\n Meats: " + meats + "\n Cheeses: " + cheeses + " \n Toppings: " + toppings +
+//                "\n Sauces: " + sauces + "\n Extra Meat: " + extraMeat
+//                + "\n Extra Cheese: " + extraCheese + "\n Price: $" + String.format("%.2f", getPrice());
 }
+

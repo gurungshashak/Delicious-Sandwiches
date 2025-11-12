@@ -13,11 +13,10 @@ public class UserInterFace {
     static Order order = new Order();
 
 
-    public void userOrder(){
-        System.out.println("Enter Your Name: ");
-        String name = sc.nextLine();
 
+    public void userOrder(){
         boolean run = true;
+
         while(run){
             System.out.println("====Welcome To Deli's Sand===");
             System.out.println("============================");
@@ -26,13 +25,18 @@ public class UserInterFace {
             System.out.print("Please enter (1 or 0): ");
             int choice = sc.nextInt();
 
-            if(choice == 1){
-                orderSandwiche();
-            }else if(choice == 0){
-                System.out.println("\n\t\t\tBye Bye");
-                System.out.println("\t=====================");
-                run = false;
-            }
+           switch(choice){
+               case 1:
+                   orderSandwiche();
+                   break;
+               case 0:
+                   System.out.println("\n\t\t\tBye Bye");
+                   System.out.println("\t=====================");
+                   run = false;
+                   break;
+                default:
+                    System.out.println("Invalid choice");
+           }
         }
     }
 
@@ -58,6 +62,7 @@ public class UserInterFace {
                     System.out.println("Order Cancelled");
                     run = false;
                 }
+                default -> System.out.println("Invalid choice");
             }
 
         }
@@ -79,29 +84,23 @@ public class UserInterFace {
         System.out.println("\tStake \n\tHam \n\tSalami \n\tRoast Beef \n\tChicken \n\tBacon");
         System.out.print("Pick: ");
         String meat = sc.next();
-
-
         if(!meat.isBlank()){
             for (String m : meat.split(",")){
                 sandwich.addMeat(m.trim());
             }
         }
 
-        //Cheese and if extra
+
         System.out.println("\n\t\tAdd Cheese");
         System.out.println("\t==================");
         System.out.println("\tAmerican \n\tProvolone \n\tCheddar \n\tSwiss");
         System.out.print("Pick: ");
         String cheese = sc.next();
-
-
         if(!cheese.isBlank()){
             for (String c : cheese.split(",")){
                 sandwich.addCheese(c.trim());
             }
         }
-
-        // toasted
 
 
         System.out.println("\n\t\tAdd Toppings");
@@ -129,18 +128,18 @@ public class UserInterFace {
 
         System.out.print("Would You Like Extra Meat? (y/n): ");
         String extraMeat = sc.next();
-        sandwich.setExtraMeat(sc.nextLine().equalsIgnoreCase("y"));
+        sandwich.setExtraMeat(extraMeat.equalsIgnoreCase("y"));
 
         System.out.print("Would You Like Extra Cheese? (y/n): ");
         String cheese2 = sc.next();
-        sandwich.setExtraCheese(sc.nextLine().equalsIgnoreCase("y"));
+        sandwich.setExtraCheese(cheese2.equalsIgnoreCase("y"));
 
         System.out.print("Would You Like it Toasted? (y/n): ");
         String toasted = sc.next();
-        sandwich.setToasted(sc.nextLine().equalsIgnoreCase("y"));
+        sandwich.setToasted(toasted.equalsIgnoreCase("y"));
 
-        order.addItem(sandwich);
-        System.out.println("\n\tsandwich Ordered");
+       order.addItem(sandwich);
+       System.out.println("\n\tsandwich Ordered");
 
 
     }
