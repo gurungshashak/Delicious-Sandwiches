@@ -46,3 +46,17 @@ you can add drinks, chips, and it will give you a receipt after you are done.
  
  **Drinks:** Small $2.00 | Medium $2.50 | Large $3.00
  **Chips:** $1.50 each
+
+
+
+  ## UpDated Order Screen
+ **As you can see that there is a new option on the screen
+
+ <img width="382" height="285" alt="orderMenu2" src="https://github.com/user-attachments/assets/9fb2d7d1-3f09-4568-804b-308f1a193d7c" />
+
+
+  ### Signature Sandwiches
+ **Theses are two preMade sandwiches which users can just select 
+ -**The BLt and Philly Cheese Steak
+ <img width="447" height="148" alt="Signature" src="https://github.com/user-attachments/assets/7f2b24b1-ed2e-470b-a411-c5e1be5ead0e" />
+
