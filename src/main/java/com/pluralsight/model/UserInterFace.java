@@ -16,7 +16,7 @@ public class UserInterFace {
 
 
 
-    public void userOrder(){
+    public static void userOrder(){
         boolean run = true;
 
         while(run){
@@ -43,6 +43,7 @@ public class UserInterFace {
     }
 
     private static void orderSandwiche(){
+
         boolean run = true;
 
         while(run){
@@ -53,6 +54,7 @@ public class UserInterFace {
             System.out.println("4) \t CheckOut");
             System.out.println(("5) \t Signature Sandwiches"));
             System.out.println("0) \t Cancel Order");
+            System.out.println("99) \t Back Home");
             System.out.print("What Would You Like(0-5): ");
             String choice = sc.nextLine();
 
@@ -65,8 +67,8 @@ public class UserInterFace {
                 case "0" ->{
                     System.out.println("Order Cancelled");
                     order.getItems().clear();
-                    run = false;
                 }
+                case "99" -> userOrder();
                 default -> System.out.println("Invalid choice");
             }
 
@@ -208,7 +210,7 @@ public class UserInterFace {
                 sandwich = new PhillyCheeseSteak();
                 break;
             case "0":
-                orderSandwiche();
+                userOrder();
                 break;
             default:
                 System.out.println("Invalid Choice!");
