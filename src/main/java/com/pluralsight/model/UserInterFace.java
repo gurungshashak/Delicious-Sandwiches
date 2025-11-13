@@ -68,7 +68,10 @@ public class UserInterFace {
                     System.out.println("Order Cancelled");
                     order.getItems().clear();
                 }
-                case "99" -> userOrder();
+                case "99" -> {
+                    userOrder();
+                    run = false;
+                }
                 default -> System.out.println("Invalid choice");
             }
 
