@@ -17,15 +17,17 @@ public class UserInterFace {
 
 
     public static void userOrder(){
-        boolean run = true;
+        boolean running = true;
 
-        while(run){
-            System.out.println("====Welcome To Deli's Sand===");
-            System.out.println("============================");
+
+        while(running){
+            System.out.println("\n\t====Welcome To Deli's Sand===");
+            System.out.println("\t============================");
             System.out.println("\t1)  New Order");
             System.out.println("\t0)  Exit");
             System.out.print("Please enter (1 or 0): ");
-            String choice = sc.nextLine();
+            String choice = sc.next();
+
 
            switch(choice){
                case "1":
@@ -34,14 +36,14 @@ public class UserInterFace {
                case "0":
                    System.out.println("\n\t\t\tBye Bye");
                    System.out.println("\t=====================");
-                   run = false;
+
+                   running = false;
                    break;
                 default:
                     System.out.println("Invalid choice");
            }
         }
     }
-
     private static void orderSandwiche(){
 
         boolean run = true;
@@ -56,28 +58,37 @@ public class UserInterFace {
             System.out.println("0) \t Cancel Order");
             System.out.println("99) \t Back Home");
             System.out.print("What Would You Like(0-5): ");
-            String choice = sc.nextLine();
+            String choice = sc.next();
 
             switch (choice){
-                case "1" -> addSandwich();
-                case "2" -> addDrink();
-                case "3" -> addChips();
-                case "4" -> checkOut();
-                case "5" -> signatureSandwiches();
-                case "0" ->{
+                case "1":
+                    addSandwich();
+                    break;
+                case "2":
+                    addDrink();
+                    break;
+                case "3": addChips();
+                    break;
+                case "4": checkOut();
+                    break;
+                case "5":
+                    signatureSandwiches();
+                    break;
+                case "0":
                     System.out.println("Order Cancelled");
                     order.getItems().clear();
-                }
-                case "99" -> {
+                    break;
+                case "99":
                     userOrder();
                     run = false;
-                }
-                default -> System.out.println("Invalid choice");
+                    break;
+                default: System.out.println("Invalid choice");
             }
 
         }
 
     }
+
 
     private static void addSandwich(){
         System.out.print("Enter Your Name: ");
@@ -91,7 +102,7 @@ public class UserInterFace {
 
         Sandwich sandwich = new Sandwich(name,bread, size);
 
-        // Meat and if extra
+
         System.out.println("\n\t\tAdd Meats");
         System.out.println("\t==================");
         System.out.println("\tStake \n\tHam \n\tSalami \n\tRoast Beef \n\tChicken \n\tBacon");
@@ -138,7 +149,6 @@ public class UserInterFace {
             }
         }
 
-
         System.out.print("Would You Like Extra Meat? (y/n): ");
         String extraMeat = sc.next();
         sandwich.setExtraMeat(extraMeat.equalsIgnoreCase("y"));
@@ -150,10 +160,10 @@ public class UserInterFace {
         System.out.print("Would You Like it Toasted? (y/n): ");
         String toasted = sc.next();
         sandwich.setToasted(toasted.equalsIgnoreCase("y"));
+        sc.nextLine();
 
        order.addItem(sandwich);
        System.out.println("\n\tsandwich Ordered");
-
 
     }
 
@@ -162,6 +172,7 @@ public class UserInterFace {
         String size = sc.next();
         System.out.print("Flavor: ");
         String flavor = sc.next();
+        sc.nextLine();
 
         order.addItem(new Drink(size, flavor));
         System.out.println("\n\t\tDrink added!!");
@@ -170,6 +181,7 @@ public class UserInterFace {
     private static void addChips(){
         System.out.print("\nType Of Chips: ");
         String type = sc.next();
+        sc.nextLine();
 
         order.addItem(new Chips(type));
         System.out.println("Chips added!!");
@@ -185,16 +197,18 @@ public class UserInterFace {
         for(Product p : order.getItems()){
             System.out.println(p.toString());
         }
-        System.out.println("Total: $" + String.format("%.2f", order.getTotal()));
+        System.out.println("\n\tTotal: $" + String.format("%.2f", order.getTotal()));
 
         System.out.print("Confirm This Is Your Order? (y/n): ");
         if(sc.next().equalsIgnoreCase("y")){
             order.saveReceipt();
             System.out.println("Order Confirmed!!");
+            sc.nextLine();
         }else {
             System.out.println("We are Sorry");
             return;
         }
+
     }
 
     private static void signatureSandwiches(){
@@ -245,7 +259,7 @@ public class UserInterFace {
                 }
             }
 
-            System.out.println("Would You Like Extra Sauce? (y/n): ");
+            System.out.print("Would You Like Extra Sauce? (y/n): ");
             String sauce = sc.next();
             if(sauce.equalsIgnoreCase("y")){
                 System.out.println("\n\t\tAdd Sauces");
@@ -258,6 +272,7 @@ public class UserInterFace {
                         sandwich.addSauce(s.trim());
                     }
                 }
+                sc.nextLine();
             }
 
         }
